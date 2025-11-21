@@ -68,17 +68,6 @@ export default function ContactPage() {
             </form>
           </CardContent>
         </Card>
-        <div className="text-center space-y-4">
-          <p className="text-muted-foreground">Or reach out directly:</p>
-          <div className="flex justify-center gap-4">
-            <a
-              href="mailto:hello@cvsloane.com"
-              className="text-primary hover:underline"
-            >
-              hello@cvsloane.com
-            </a>
-          </div>
-        </div>
       </motion.div>
     </div>
   );

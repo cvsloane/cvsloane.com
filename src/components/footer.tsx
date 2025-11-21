@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/cvsloane" },
-  { name: "LinkedIn", href: "https://linkedin.com/in/cvsloane" },
+  { name: "Substack", href: "https://cvsloane.substack.com" },
   { name: "Twitter", href: "https://twitter.com/cvsloane" },
 ];
 

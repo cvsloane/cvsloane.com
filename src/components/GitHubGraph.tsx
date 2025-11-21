@@ -35,33 +35,40 @@ export function GitHubGraph({ username = "cvsloane" }: GitHubGraphProps) {
                     My contribution history over the past year
                 </p>
             </div>
-            <div className="w-full overflow-x-auto px-4">
-                <div className="min-w-[700px]">
-                    <GitHubCalendar
-                        username={username}
-                        colorScheme={theme === "dark" ? "dark" : "light"}
-                        blockSize={12}
-                        blockMargin={4}
-                        fontSize={14}
-                        theme={{
-                            light: [
-                                "oklch(0.96 0.01 270)",
-                                "oklch(0.7 0.15 270)",
-                                "oklch(0.6 0.2 270)",
-                                "oklch(0.55 0.22 270)",
-                                "oklch(0.5 0.24 270)",
-                            ],
-                            dark: [
-                                "oklch(0.22 0.03 270)",
-                                "oklch(0.5 0.15 280)",
-                                "oklch(0.6 0.18 280)",
-                                "oklch(0.7 0.2 280)",
-                                "oklch(0.75 0.22 280)",
-                            ],
-                        }}
-                    />
+            <a
+                href={`https://github.com/${username}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+            >
+                <div className="flex justify-center overflow-x-auto px-4">
+                    <div className="min-w-[700px]">
+                        <GitHubCalendar
+                            username={username}
+                            colorScheme={theme === "dark" ? "dark" : "light"}
+                            blockSize={12}
+                            blockMargin={4}
+                            fontSize={14}
+                            theme={{
+                                light: [
+                                    "oklch(0.96 0.01 270)",
+                                    "oklch(0.7 0.15 270)",
+                                    "oklch(0.6 0.2 270)",
+                                    "oklch(0.55 0.22 270)",
+                                    "oklch(0.5 0.24 270)",
+                                ],
+                                dark: [
+                                    "oklch(0.22 0.03 270)",
+                                    "oklch(0.5 0.15 280)",
+                                    "oklch(0.6 0.18 280)",
+                                    "oklch(0.7 0.2 280)",
+                                    "oklch(0.75 0.22 280)",
+                                ],
+                            }}
+                        />
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     );
 }
