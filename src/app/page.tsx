@@ -19,7 +19,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl font-bold tracking-tight sm:text-6xl"
         >
-          Hi, I&apos;m <span className="text-primary">cvsloane</span>
+          Hi, I&apos;m <span className="text-primary">Chris Sloane</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -27,8 +27,8 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl text-muted-foreground max-w-2xl"
         >
-          Welcome to my personal website. I build things for the web and love
-          exploring new technologies.
+          I build marketing brands and AI-powered software. Founder of Heaviside Group, 
+          combining a background in Computational Physics with modern digital strategy.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

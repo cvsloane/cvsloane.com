@@ -1,33 +1,54 @@
 export interface Project {
   title: string;
   description: string;
-  tech: string[];
-  github?: string;
-  demo?: string;
+  specs: string[];
 }
 
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "Enterprise Multi-Tenant CMS",
     description:
-      "A brief description of your first project. Explain what it does and why it's interesting.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/cvsloane/project-one",
-    demo: "https://project-one.vercel.app",
+      "A scalable platform managing 50-100+ isolated sites with shared architecture but distinct content and branding. Designed to streamline agency operations by centralizing code maintenance while allowing individual site customization.",
+    specs: [
+      "Next.js 15",
+      "Supabase",
+      "TypeScript",
+      "Row Level Security",
+      "Edge Functions",
+    ],
   },
   {
-    title: "Project Two",
+    title: "Real-Time Logistics Intelligence",
     description:
-      "Another project description. Highlight the key features and technologies used.",
-    tech: ["React", "Node.js", "PostgreSQL"],
-    github: "https://github.com/cvsloane/project-two",
+      "A monitoring system for the US freight rail network, providing real-time visibility and analytics. Processes high-volume data streams to visualize network status and identify logistical bottlenecks.",
+    specs: [
+      "Real-time Data Streaming",
+      "Geospatial Visualization",
+      "High-Performance Rendering",
+      "WebSocket API",
+    ],
   },
   {
-    title: "Project Three",
+    title: "AI-Driven Task Management",
     description:
-      "Your third project. Share what problem it solves and what you learned building it.",
-    tech: ["Python", "FastAPI", "Docker"],
-    github: "https://github.com/cvsloane/project-three",
-    demo: "https://project-three.vercel.app",
+      "An intelligent task manager that uses AI to categorize, prioritize, and assist with daily workflows. Built with a local-first architecture to ensure instant responsiveness and offline capability.",
+    specs: [
+      "Progressive Web App (PWA)",
+      "Local-First Architecture",
+      "LLM Integration",
+      "Offline Support",
+    ],
+  },
+  {
+    title: "Agency Operations Automation Suite",
+    description:
+      "A suite of internal tools automating SEO analysis, revenue tracking, and lead generation. Integrates disparate data sources to provide a unified view of agency health and automate repetitive administrative tasks.",
+    specs: [
+      "Python",
+      "API Integrations",
+      "Scheduled Jobs",
+      "Data Pipelines",
+      "Automated Reporting",
+    ],
   },
 ];

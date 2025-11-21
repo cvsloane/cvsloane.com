@@ -1,9 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
@@ -16,13 +14,12 @@ export default function ProjectsPage() {
         className="space-y-8"
       >
         <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight">Projects</h1>
+          <h1 className="text-4xl font-bold tracking-tight">Recent Technical Work</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects I&apos;ve worked on. Each one represents a
-            unique challenge and learning experience.
+            A selection of recent engineering challenges and systems I&apos;ve architected.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -33,34 +30,21 @@ export default function ProjectsPage() {
               <Card className="h-full flex flex-col">
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardDescription className="text-base">{project.description}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex-1 flex flex-col justify-between">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-muted text-xs rounded-md"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-2">
-                    {project.github && (
-                      <Button asChild variant="outline" size="sm">
-                        <Link href={project.github} target="_blank">
-                          GitHub
-                        </Link>
-                      </Button>
-                    )}
-                    {project.demo && (
-                      <Button asChild size="sm">
-                        <Link href={project.demo} target="_blank">
-                          Demo
-                        </Link>
-                      </Button>
-                    )}
+                <CardContent className="flex-1">
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-muted-foreground">Key Specifications</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.specs.map((spec) => (
+                        <span
+                          key={spec}
+                          className="px-2.5 py-1 bg-secondary text-secondary-foreground text-sm rounded-md font-medium"
+                        >
+                          {spec}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
