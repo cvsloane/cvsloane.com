@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { projects } from "@/data/projects";
+import { GitHubGraph } from "@/components/GitHubGraph";
 
 export default function ProjectsPage() {
   return (
@@ -11,8 +12,10 @@ export default function ProjectsPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="space-y-8"
+        className="space-y-12"
       >
+        <GitHubGraph />
+
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">Recent Technical Work</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
