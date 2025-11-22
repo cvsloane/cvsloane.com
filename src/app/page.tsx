@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+
 
 import { BentoGrid } from "@/components/BentoGrid";
 
@@ -65,19 +64,6 @@ export default function Home() {
           I build marketing brands and AI-powered software. Founder of Heaviside Group, 
           combining a background in Computational Physics with modern digital strategy.
         </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
-        >
-          <Button asChild size="lg" className="text-lg px-8 py-6 glow-effect hover:scale-105 transition-transform rounded-full">
-            <Link href="/projects">View Projects</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 hover:scale-105 transition-transform rounded-full">
-            <Link href="/contact">Get in Touch</Link>
-          </Button>
-        </motion.div>
       </motion.div>
 
       {/* Bento Grid Section */}

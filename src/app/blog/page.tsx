@@ -2,7 +2,11 @@ import { getLatestPosts } from "@/lib/substack";
 import { BlogList } from "./BlogList";
 import { SubstackSubscribe } from "@/components/SubstackSubscribe";
 
-export const revalidate = 3600; // Revalidate every hour
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+};
 
 export default async function BlogPage() {
   const posts = await getLatestPosts();

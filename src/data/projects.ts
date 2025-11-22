@@ -114,43 +114,6 @@ export const projects: Project[] = [
     status: "Project",
     featured: true,
   },
-
-  // --- Other Technical Work (Restored) ---
-  {
-    title: "HG Email",
-    description:
-      "Email marketing platform designed for high-deliverability campaigns and automated sequences.",
-    specs: ["Email", "Automation", "Infrastructure"],
-    logoUrl: "/images/logos/hg-email.png",
-    website: "https://hg-email.com",
-    stats: [
-      { label: "Focus", value: "Deliverability" },
-      { label: "Type", value: "SaaS" },
-    ],
-    features: [
-      "High-Deliverability Engine",
-      "Automated Sequences",
-      "Campaign Management",
-      "Infrastructure Control",
-    ],
-    color: "oklch(0.6 0.15 30)",
-    status: "Live",
-    featured: true,
-  },
-  {
-    title: "Heaviside Tasks",
-    description:
-      "AI-powered task management Progressive Web App. Built with a local-first architecture to ensure instant responsiveness and offline capability.",
-    specs: ["PWA", "Local-First", "LLM Integration", "Offline Support"],
-    featured: false,
-  },
-  {
-    title: "HG Websites",
-    description:
-      "Multi-tenant marketing platform for Heaviside Group agencies, streamlining the deployment and management of niche-specific marketing sites.",
-    specs: ["Next.js", "React", "Marketing Automation"],
-    featured: false,
-  },
   {
     title: "Site2Next",
     description:

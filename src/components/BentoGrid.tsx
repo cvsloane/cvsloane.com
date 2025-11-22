@@ -56,11 +56,11 @@ export function BentoGrid() {
       {/* Businesses - Tall Card */}
       <motion.div
         variants={item}
-        className="md:col-span-1 row-span-2 relative group overflow-hidden rounded-3xl bg-linear-to-br from-purple-600/10 to-pink-500/10 border border-white/10 p-8 flex flex-col justify-between"
+        className="md:col-span-1 row-span-2 relative group overflow-hidden rounded-3xl bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-white/10 p-8 flex flex-col justify-between"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-purple-600/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="relative z-10">
-          <div className="flex items-center gap-2 text-purple-400 mb-2">
+          <div className="flex items-center gap-2 text-cyan-400 mb-2">
             <Briefcase className="w-5 h-5" />
             <span className="text-sm font-medium uppercase tracking-wider">Businesses</span>
           </div>
@@ -85,7 +85,7 @@ export function BentoGrid() {
         className="md:col-span-2 relative group overflow-hidden rounded-3xl bg-secondary/30 border border-white/10 p-8 flex flex-col md:flex-row items-center gap-6"
       >
         <div className="relative z-10 flex-1">
-          <div className="flex items-center gap-2 text-green-400 mb-2">
+          <div className="flex items-center gap-2 text-blue-400 mb-2">
             <User className="w-5 h-5" />
             <span className="text-sm font-medium uppercase tracking-wider">About Me</span>
           </div>
@@ -104,11 +104,11 @@ export function BentoGrid() {
       {/* Contact - Small Card */}
       <motion.div
         variants={item}
-        className="md:col-span-1 relative group overflow-hidden rounded-3xl bg-linear-to-br from-orange-500/10 to-red-500/10 border border-white/10 p-8 flex flex-col justify-center items-center text-center hover:border-orange-500/50 transition-colors cursor-pointer"
+        className="md:col-span-1 relative group overflow-hidden rounded-3xl bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-white/10 p-8 flex flex-col justify-center items-center text-center hover:border-blue-500/50 transition-colors cursor-pointer"
       >
         <Link href="/contact" className="absolute inset-0 z-20" />
-        <div className="absolute inset-0 bg-linear-to-br from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <Mail className="w-10 h-10 text-orange-400 mb-4 group-hover:scale-110 transition-transform" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <Mail className="w-10 h-10 text-cyan-400 mb-4 group-hover:scale-110 transition-transform" />
         <h3 className="text-xl font-bold">Get in Touch</h3>
       </motion.div>
     </motion.div>

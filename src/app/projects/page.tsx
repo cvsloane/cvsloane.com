@@ -6,6 +6,12 @@ import { GitHubGraph } from "@/components/GitHubGraph";
 import { FeatureSection } from "@/components/FeatureSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
+
 export default function ProjectsPage() {
   const featuredProjects = projects.filter(p => p.featured);
   const otherProjects = projects.filter(p => !p.featured);
@@ -23,7 +29,7 @@ export default function ProjectsPage() {
         {/* Featured Projects */}
         <div className="space-y-12">
           <div className="text-center space-y-4 py-8">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-primary to-primary/50">
               Technical Work
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

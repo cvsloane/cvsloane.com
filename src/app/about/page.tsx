@@ -1,8 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function AboutPage() {
     return (
@@ -75,17 +81,29 @@ export default function AboutPage() {
                     </div>
 
                     <div className="flex gap-4 pt-4">
-                        <Button variant="outline" size="icon" className="rounded-full">
-                            <Github className="w-5 h-5" />
+                        <Button variant="outline" size="icon" className="rounded-full" asChild>
+                            <a href="https://github.com/cvsloane" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <Github className="w-5 h-5" />
+                            </a>
                         </Button>
-                        <Button variant="outline" size="icon" className="rounded-full">
-                            <Linkedin className="w-5 h-5" />
+                        <Button variant="outline" size="icon" className="rounded-full" asChild>
+                            <a href="https://x.com/cvsloane" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </a>
                         </Button>
-                        <Button variant="outline" size="icon" className="rounded-full">
-                            <Twitter className="w-5 h-5" />
+                        <Button variant="outline" size="icon" className="rounded-full" asChild>
+                            <a href="https://cvsloane.substack.com" target="_blank" rel="noopener noreferrer" aria-label="Substack">
+                                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+                                    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+                                </svg>
+                            </a>
                         </Button>
-                        <Button variant="outline" size="icon" className="rounded-full">
-                            <Mail className="w-5 h-5" />
+                        <Button variant="outline" size="icon" className="rounded-full" asChild>
+                            <a href="mailto:chris@heavisidegroup.com" aria-label="Email">
+                                <Mail className="w-5 h-5" />
+                            </a>
                         </Button>
                     </div>
                 </motion.div>

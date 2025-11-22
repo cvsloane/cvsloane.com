@@ -17,8 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "cvsloane",
-    template: "%s | cvsloane",
+    default: "Chris Sloane | Home",
+    template: "Chris Sloane | %s",
+  },
+  icons: {
+    icon: "/images/signatures/Christopher-Sloane-Initials_black_high-res.png",
   },
   description: "Personal website of cvsloane",
   keywords: ["developer", "portfolio", "blog"],
