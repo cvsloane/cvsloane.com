@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-// @ts-expect-error - react-github-calendar doesn't have TypeScript types
 import { GitHubCalendar } from "react-github-calendar";
 
 interface GitHubGraphProps {
