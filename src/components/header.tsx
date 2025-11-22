@@ -12,6 +12,8 @@ const navItems = [
   { name: "Contact", href: "/contact" },
 ];
 
+import { Logo } from "./Logo";
+
 export function Header() {
   return (
     <motion.header
@@ -21,8 +23,8 @@ export function Header() {
       suppressHydrationWarning
     >
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="font-bold text-2xl hover:text-primary transition-colors">
-          cvsloane
+        <Link href="/" className="hover:opacity-80 transition-opacity">
+          <Logo width={50} height={50} />
         </Link>
         <nav className="flex items-center gap-8">
           {navItems.map((item) => (

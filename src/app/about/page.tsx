@@ -72,34 +72,6 @@ export default function AboutPage() {
                                 to revolutionize how we build software and deliver value.
                             </p>
                         </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-semibold tracking-tight flex items-center gap-2">
-                                <span className="w-8 h-1 bg-blue-500 rounded-full" />
-                                Skills & Tech
-                            </h2>
-                            <div className="flex flex-wrap gap-2">
-                                {[
-                                    "Next.js", "TypeScript", "Supabase", "AI Agents", 
-                                    "System Architecture", "SEO Strategy", "React", "TailwindCSS"
-                                ].map((skill) => (
-                                    <span key={skill} className="px-4 py-2 rounded-full bg-secondary/50 border border-border text-sm font-medium hover:bg-secondary transition-colors cursor-default">
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-semibold tracking-tight flex items-center gap-2">
-                                <span className="w-8 h-1 bg-blue-600 rounded-full" />
-                                Personal
-                            </h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Based in Cincinnati, I&apos;m a devoted Christian, husband, and father to a large, energetic family. 
-                                When I&apos;m not coding or building businesses, you&apos;ll find me cheering for Wisconsin sports teams.
-                            </p>
-                        </div>
                     </div>
 
                     <div className="flex gap-4 pt-4">

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+import { BentoGrid } from "@/components/BentoGrid";
+
 export default function Home() {
   return (
     <div className="relative container flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-12 overflow-hidden">
@@ -69,14 +71,19 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
         >
-          <Button asChild size="lg" className="text-lg px-8 py-6 glow-effect hover:scale-105 transition-transform">
+          <Button asChild size="lg" className="text-lg px-8 py-6 glow-effect hover:scale-105 transition-transform rounded-full">
             <Link href="/projects">View Projects</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 hover:scale-105 transition-transform">
+          <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 hover:scale-105 transition-transform rounded-full">
             <Link href="/contact">Get in Touch</Link>
           </Button>
         </motion.div>
       </motion.div>
+
+      {/* Bento Grid Section */}
+      <div className="w-full max-w-6xl mx-auto mt-24 relative z-10">
+        <BentoGrid />
+      </div>
     </div>
   );
 }
