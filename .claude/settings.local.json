@@ -12,7 +12,8 @@
       "WebFetch(domain:hgcontent.com)",
       "WebFetch(domain:hgseocommander.com)",
       "WebFetch(domain:hg-email.com)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebFetch(domain:revenuecommander.com)"
     ],
     "deny": [],
     "ask": []
