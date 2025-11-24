@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ThemeToggle } from "./theme-toggle";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const navItems = [
   { name: "About", href: "/about" },
@@ -15,6 +18,8 @@ const navItems = [
 import { Logo } from "./Logo";
 
 export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -26,7 +31,8 @@ export function Header() {
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <Logo width={50} height={50} />
         </Link>
-        <nav className="flex items-center gap-8">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -39,7 +45,46 @@ export function Header() {
           ))}
           <ThemeToggle />
         </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {/* Mobile Navigation Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-lg"
+          >
+            <nav className="container flex flex-col gap-4 py-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="pt-4 flex items-center gap-4">
+                <span className="text-sm text-muted-foreground">Theme</span>
+                <ThemeToggle />
+              </div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </motion.header>
   );
 }

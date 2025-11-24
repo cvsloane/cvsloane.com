@@ -9,6 +9,7 @@ export function Logo({ className = "", width = 40, height = 40 }: { className?: 
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line
     setMounted(true);
   }, []);
 
