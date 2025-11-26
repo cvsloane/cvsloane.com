@@ -5,6 +5,7 @@ export interface SubstackPost {
   link: string;
   pubDate: string;
   contentSnippet: string;
+  image?: string;
 }
 
 const FEED_URL = "https://cvsloane.substack.com/feed";
@@ -26,9 +27,17 @@ export async function getLatestPosts(): Promise<SubstackPost[]> {
       link: item.link || "",
       pubDate: item.pubDate || "",
       contentSnippet: item.contentSnippet || "",
+      image:
+        (item.enclosure as { url?: string } | undefined)?.url ||
+        extractFirstImage(item["content:encoded"] || item.content || ""),
     }));
   } catch (error) {
     console.error("Error fetching Substack feed:", error);
     return [];
   }
+}
+
+function extractFirstImage(html: string): string | undefined {
+  const match = html.match(/<img[^>]+src="([^">]+)"/i);
+  return match?.[1];
 }
